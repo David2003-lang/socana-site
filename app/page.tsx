@@ -68,7 +68,7 @@ export default function Home() {
           <div className="relative">
             <div className="absolute -inset-4 rounded-[2rem] bg-[#E8E2D5]" />
 
-            <div className="relative flex min-h-[360px] items-end overflow-hidden rounded-[1.5rem] bg-cover bg-center p-8 md:min-h-[480px]" style={{ backgroundImage: "url('/Homepage.png')" }}>
+            <div className="relative flex min-h-[360px] items-end overflow-hidden rounded-[1.5rem] bg-cover bg-center p-8 md:min-h-[480px]" style={{ backgroundImage: "url('/newhomepage.png')" }}>
               <div className="absolute right-8 top-8 text-7xl opacity-30">
                 🌿
               </div>
@@ -84,8 +84,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="absolute -bottom-5 -left-3 rounded-2xl bg-white px-5 py-4 shadow-lg md:-left-7">
-              <p className="text-sm font-bold text-[#1F5A36]">
+<div className="absolute -bottom-5 right-3 rounded-2xl bg-white px-5 py-4 shadow-lg md:right-4">             <p className="text-sm font-bold text-[#1F5A36]">
                 SOCANA COOP-CA
               </p>
               <p className="mt-1 text-xs text-gray-500">
@@ -131,18 +130,50 @@ export default function Home() {
 
           <div className="mt-12 grid gap-6 sm:grid-cols-2 md:grid-cols-3">
             {products.map((product) => (
-              <div
-                key={product}
-                className="rounded-2xl border border-[#E8E2D5] bg-white p-8 transition hover:-translate-y-1 hover:shadow-lg"
-              >
-                <div className="mb-4 text-3xl">🌿</div>
-                <h3 className="text-xl font-bold">{product}</h3>
-                <p className="mt-3 text-sm leading-6 text-gray-600">
-                  Un produit agricole au cœur de notre engagement pour la
-                  qualité et le développement durable.
-                </p>
-              </div>
-            ))}
+  <div
+    key={product}
+    className="rounded-2xl border border-[#E8E2D5] bg-white p-8 transition hover:-translate-y-1 hover:shadow-lg"
+  >
+    {product === "Cacao" ? (
+      <img
+        src="/cacao.jpg"
+        alt="Cacao"
+        className="mb-4 h-40 w-full rounded-xl object-cover"
+      />
+   ) : product === "Caoutchouc naturel" ? (
+  <img
+    src="/caoutchouc.jpg"
+    alt="Caoutchouc naturel"
+    className="mb-4 h-40 w-full rounded-xl object-cover"
+  />
+) : product === "Noix de cajou" ? (
+  <img
+    src="/cajou.jpg"
+    alt="Noix de cajou"
+    className="mb-4 h-40 w-full rounded-xl object-cover"
+  />
+) : product === "Coques de cajou" ? (
+  <img
+    src="/coques-cajou.jpg"
+    alt="Coques de cajou"
+    className="mb-4 h-40 w-full rounded-xl object-cover"
+  />
+) : product === "Café" ? (
+  <img
+    src="/cafe.jpg"
+    alt="Café"
+    className="mb-4 h-40 w-full rounded-xl object-cover"
+  />
+) : (
+  <div className="mb-4 text-3xl">🌿</div>
+)}
+    <h3 className="text-xl font-bold">{product}</h3>
+    <p className="mt-3 text-sm leading-6 text-gray-600">
+      Un produit agricole au cœur de notre engagement pour la
+      qualité et le développement durable.
+    </p>
+  </div>
+))}
           </div>
         </div>
       </section>
