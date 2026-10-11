@@ -68,7 +68,7 @@ export default function Home() {
           <div className="relative">
             <div className="absolute -inset-4 rounded-[2rem] bg-[#E8E2D5]" />
 
-            <div className="relative flex min-h-[360px] items-end overflow-hidden rounded-[1.5rem] bg-cover bg-center p-8 md:min-h-[480px]" style={{ backgroundImage: "url('/newhomepage.png')" }}>
+            <div className="relative flex min-h-[360px] items-end overflow-hidden rounded-[1.5rem] bg-cover bg-center p-8 md:min-h-[480px]" style={{ backgroundImage: "url('/NewHomepage.png')" }}>
               <div className="absolute right-8 top-8 text-7xl opacity-30">
                 🌿
               </div>
@@ -148,19 +148,19 @@ export default function Home() {
   />
 ) : product === "Noix de cajou" ? (
   <img
-    src="/cajou.jpg"
+    src="/cajou.Jpg"
     alt="Noix de cajou"
     className="mb-4 h-40 w-full rounded-xl object-cover"
   />
 ) : product === "Coques de cajou" ? (
   <img
-    src="/coques-cajou.jpg"
+    src="/coques-cajou.Jpg"
     alt="Coques de cajou"
     className="mb-4 h-40 w-full rounded-xl object-cover"
   />
 ) : product === "Café" ? (
   <img
-    src="/cafe.jpg"
+    src="/cafe.Jpg"
     alt="Café"
     className="mb-4 h-40 w-full rounded-xl object-cover"
   />
