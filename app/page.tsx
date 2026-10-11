@@ -10,9 +10,15 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-[#F8F5EF] text-[#1F5A36]">
       <header className="flex items-center justify-between px-6 py-6 md:px-12">
-        <h1 className="text-2xl font-extrabold tracking-wide">
-          SOCANA <span className="text-[#B66B32]">COOP-CA</span>
-        </h1>
+        
+<a href="#accueil" className="flex items-center">
+  <img
+    src="/socana-logo.jpeg"
+    alt="SOCANA COOP-CA"
+    className="h-16 w-auto object-contain"
+  />
+</a>
+
 
         <nav className="hidden gap-6 text-sm font-medium md:flex">
           <a href="#accueil">Accueil</a>
