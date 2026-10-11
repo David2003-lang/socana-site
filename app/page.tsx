@@ -68,7 +68,7 @@ export default function Home() {
           <div className="relative">
             <div className="absolute -inset-4 rounded-[2rem] bg-[#E8E2D5]" />
 
-            <div className="relative flex min-h-[360px] items-end overflow-hidden rounded-[1.5rem] bg-gradient-to-br from-[#527D45] via-[#285C37] to-[#173F2A] p-8 md:min-h-[480px]">
+            <div className="relative flex min-h-[360px] items-end overflow-hidden rounded-[1.5rem] bg-cover bg-center p-8 md:min-h-[480px]" style={{ backgroundImage: "url('/Homepage.png')" }}>
               <div className="absolute right-8 top-8 text-7xl opacity-30">
                 🌿
               </div>
