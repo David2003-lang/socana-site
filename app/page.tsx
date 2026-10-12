@@ -20,11 +20,12 @@ export default function Home() {
 </a>
 
 
-        <nav className="hidden gap-6 text-sm font-medium md:flex">
+                <nav className="hidden gap-6 text-sm font-medium md:flex">
           <a href="#accueil">Accueil</a>
           <a href="#apropos">À propos</a>
           <a href="#produits">Nos produits</a>
           <a href="#contact">Contact</a>
+          <a href="/acheteurs-partenaires">Acheteurs &amp; Partenaires</a>
         </nav>
       </header>
             <section
