@@ -1,4 +1,11 @@
+"use client";
+
+import { useState } from "react";
+
+
 export default function Home() {
+    const [language, setLanguage] = useState("fr");
+  
   const products = [
     "Caoutchouc naturel",
     "Cacao",
@@ -6,6 +13,42 @@ export default function Home() {
     "Coques de cajou",
     "Café",
   ];
+
+  const translations = {
+    fr: {
+      home: "Accueil",
+      about: "À propos",
+      products: "Nos produits",
+      contact: "Contact",
+      buyers: "Acheteurs & Partenaires",
+      discover: "Découvrir nos produits →",
+      who: "Qui sommes-nous ?",
+    },
+    en: {
+      home: "Home",
+      about: "About us",
+      products: "Our products",
+      contact: "Contact",
+      buyers: "Buyers & Partners",
+      discover: "Discover our products →",
+      who: "Who are we?",
+    },
+    es: {
+      home: "Inicio",
+      about: "Nosotros",
+      products: "Nuestros productos",
+      contact: "Contacto",
+      buyers: "Compradores y socios",
+      discover: "Descubre nuestros productos →",
+      who: "¿Quiénes somos?",
+    },
+  };
+
+  const t = translations[language as keyof typeof translations];
+
+
+
+
 
   return (
     <main className="min-h-screen bg-[#F8F5EF] text-[#1F5A36]">
@@ -21,11 +64,13 @@ export default function Home() {
 
 
                 <nav className="flex flex-wrap items-center gap-4 text-sm font-medium">
-          <a href="#accueil">Accueil</a>
-          <a href="#apropos">À propos</a>
-          <a href="#produits">Nos produits</a>
-          <a href="#contact">Contact</a>
-          <a href="/acheteurs-partenaires">Acheteurs &amp; Partenaires</a>
+          
+<a href="#accueil">{t.home}</a>
+<a href="#apropos">{t.about}</a>
+<a href="#produits">{t.products}</a>
+<a href="#contact">{t.contact}</a>
+<a href="/acheteurs-partenaires">{t.buyers}</a>
+
         </nav>
       </header>
             <section
@@ -39,14 +84,21 @@ export default function Home() {
             </p>
 
             <h2 className="text-5xl font-extrabold leading-[1.1] tracking-tight md:text-7xl">
-              Cultivons
-              <span className="block text-[#B66B32]">l’avenir,</span>
-              ensemble.
+              {language === "en" ? (
+  <>Growing <span className="block text-[#B66B32]">the future,</span> together.</>
+) : language === "es" ? (
+  <>Cultivando <span className="block text-[#B66B32]">el futuro,</span> juntos.</>
+) : (
+  <>Cultivons <span className="block text-[#B66B32]">l’avenir,</span> ensemble.</>
+)}
             </h2>
 
             <p className="mt-7 max-w-lg text-lg leading-8 text-gray-600">
-              De la terre aux marchés, SOCANA COOP-CA s’engage à valoriser
-              les richesses agricoles et à bâtir des partenariats durables.
+              {language === "en"
+  ? "From the land to the markets, SOCANA COOP-CA is committed to promoting agricultural resources and building lasting partnerships."
+  : language === "es"
+  ? "De la tierra a los mercados, SOCANA COOP-CA se compromete a valorizar los recursos agrícolas y construir alianzas duraderas."
+  : "De la terre aux marchés, SOCANA COOP-CA s’engage à valoriser les richesses agricoles et à bâtir des partenariats durables."}
             </p>
 
             <div className="mt-9 flex flex-wrap gap-4">
@@ -54,21 +106,21 @@ export default function Home() {
                 href="#produits"
                 className="rounded-full bg-[#1F5A36] px-7 py-4 font-semibold text-white transition hover:bg-[#17452A]"
               >
-                Découvrir nos produits →
+                {t.discover}
               </a>
 
               <a
                 href="#apropos"
                 className="rounded-full border border-[#1F5A36]/30 px-7 py-4 font-semibold transition hover:bg-white"
               >
-                Qui sommes-nous ?
+                {t.who}
               </a>
             </div>
 
             <div className="mt-10 flex flex-wrap gap-x-8 gap-y-3 text-sm font-medium text-gray-500">
-              <span>● Qualité</span>
-              <span>● Engagement</span>
-              <span>● Durabilité</span>
+              <span>● {language === "en" ? "Quality" : language === "es" ? "Calidad" : "Qualité"}</span>
+<span>● {language === "en" ? "Commitment" : language === "es" ? "Compromiso" : "Engagement"}</span>
+<span>● {language === "en" ? "Sustainability" : language === "es" ? "Sostenibilidad" : "Durabilité"}</span>
             </div>
           </div>
 
@@ -82,11 +134,19 @@ export default function Home() {
 
               <div className="relative max-w-sm text-white">
                 <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#E7C49D]">
-                  Notre terre, notre richesse
+                  {language === "en"
+  ? "Our land, our wealth"
+  : language === "es"
+  ? "Nuestra tierra, nuestra riqueza"
+  : "Notre terre, notre richesse"}
                 </p>
 
                 <p className="mt-3 text-3xl font-bold leading-tight">
-                  Des produits agricoles au potentiel durable.
+                  {language === "en"
+  ? "Agricultural products with sustainable potential."
+  : language === "es"
+  ? "Productos agrícolas con potencial sostenible."
+  : "Des produits agricoles au potentiel durable."}
                 </p>
               </div>
             </div>
