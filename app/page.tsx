@@ -203,7 +203,7 @@ export default function Home() {
           </p>
 
           <a
-            href="mailto:contact@socana.ci"
+            href="mailto:exportsocanacoopca@gmail.com"
             className="mt-8 inline-block rounded-full bg-[#F8F5EF] px-8 py-4 font-semibold text-[#1F5A36] transition hover:bg-white"
           >
             Envoyer un e-mail
